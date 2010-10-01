@@ -1,0 +1,31 @@
+<yex10 measDir="F:\Symphony\YAPP\FileIO.yapp Measurements\" description="">
+    <measurements />
+    <experiment0 loopDelay="5000" loops="5">
+        <hardware hx="70" hy="20">
+            <cameras />
+            <pulseGens />
+            <motorDrivers />
+            <measDevices />
+            <ports />
+            <slaves />
+        </hardware>
+        <variables>
+            <variable nm="x" vt="1" sv="0" lf="200" lt="1000" lh="1" kv="" ks="0" eq="" lz="1" id="0" />
+            <variable nm="y" vt="1" sv="0" lf="200" lt="1000" lh="1" kv="" ks="0" eq="" lz="1" id="0" />
+            <variable nm="z" vt="1" sv="0" lf="200" lt="1000" lh="1" kv="" ks="0" eq="" lz="1" id="0" />
+        </variables>
+        <setupActions>
+            <aFileWrite fn="myFile.txt" fp="F:\Symphony\YAPP\Dantec" cn="READY&#x0D;&#x0A;." uu="1" cf="1" />
+            <aPause dr="200" />
+            <aFileWrite fn="myFile.txt" fp="F:\Symphony\YAPP\Dantec" cn="CALIBRATE 16,16,16&#x0D;&#x0A;." uu="1" cf="1" />
+            <aPause dr="200" />
+            <aFileWrite fn="myFile.txt" fp="F:\Symphony\YAPP\Dantec" cn="HOME&#x0D;&#x0A;." uu="1" cf="1" />
+            <aPause dr="20000" />
+        </setupActions>
+        <acquisitionActions>
+            <aFileWrite fn="myFile.txt" fp="F:\Symphony\YAPP\Dantec" cn="MOVE &lt;!x!&gt;,&lt;!y!&gt;,&lt;!z!&gt;&#x0D;&#x0A;." uu="1" cf="1" />
+        </acquisitionActions>
+        <processingActions />
+        <concludingActions />
+    </experiment0>
+</yex10>
