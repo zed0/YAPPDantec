@@ -151,7 +151,16 @@ bool doCommand(string fullCommand)
 	}
 	else if(firstCommand == "HOME")
 	{
-		sendHome(true, true, true);
+		int axes;
+		getline(stream, axes);
+		if(axes)
+		{
+			sendHome(axes&0x01, axes&0x02, axes&0x04);
+		}
+		else
+		{
+			sendHome(true,true,true)
+		}
 	}
 	else if(firstCommand == "GETPOS")
 	{
